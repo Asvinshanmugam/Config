@@ -1,0 +1,10 @@
+{
+    "parameters": {
+        "controls-autoexposure-auto": "False",
+        "controls-autoexposure-manual": "9000",
+        "controls-depth-gain": "50",
+        "controls-depth-white-balance-auto": "False",
+        "controls-laserstate": "off"
+    },
+    "schema version": 1
+}

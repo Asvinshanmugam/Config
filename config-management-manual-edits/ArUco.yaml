@@ -1,0 +1,174 @@
+# ArUco
+bundle_config:
+  baskets_left_fryers_bundles:
+    - bundle_type: HennyPenny_EEG-244_bundle
+      marker_ids: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    - bundle_type: HennyPenny_EEG-244_bundle
+      marker_ids: [20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+    - bundle_type: basket_bundle
+      marker_ids: [50, 60, 70, 80, 90, 100]
+    - bundle_type: basket_bundle
+      marker_ids: [51, 61, 71, 81, 91, 101]
+    - bundle_type: basket_bundle
+      marker_ids: [52, 62, 72, 82, 92, 102]
+    - bundle_type: basket_bundle
+      marker_ids: [53, 63, 73, 83, 93, 103]
+    - bundle_type: basket_bundle
+      marker_ids: [54, 64, 74, 84, 94, 104]
+    - bundle_type: basket_bundle
+      marker_ids: [55, 65, 75, 85, 95, 105]
+    - bundle_type: basket_bundle
+      marker_ids: [56, 66, 76, 86, 96, 106]
+    - bundle_type: basket_bundle
+      marker_ids: [57, 67, 77, 87, 97, 107]
+    - bundle_type: basket_bundle
+      marker_ids: [58, 68, 78, 88, 98, 108]
+    - bundle_type: basket_bundle
+      marker_ids: [59, 69, 79, 89, 99, 109]
+    - bundle_type: basket_bundle
+      marker_ids: [110, 120, 130, 140, 150, 160]
+    - bundle_type: basket_bundle
+      marker_ids: [111, 121, 131, 141, 151, 161]
+    - bundle_type: basket_bundle
+      marker_ids: [112, 122, 132, 142, 152, 162]
+    - bundle_type: basket_bundle
+      marker_ids: [113, 123, 133, 143, 153, 163]
+    - bundle_type: basket_bundle
+      marker_ids: [114, 124, 134, 144, 154, 164]
+    - bundle_type: basket_bundle
+      marker_ids: [115, 125, 135, 145, 155, 165]
+    - bundle_type: basket_bundle
+      marker_ids: [116, 126, 136, 146, 156, 166]
+    - bundle_type: basket_bundle
+      marker_ids: [117, 127, 137, 147, 157, 167]
+    - bundle_type: basket_bundle
+      marker_ids: [118, 128, 138, 148, 158, 168]
+    - bundle_type: basket_bundle
+      marker_ids: [119, 129, 139, 149, 159, 169]
+  baskets_mid_fryers_bundles:
+    - bundle_type: HennyPenny_EEG-244_bundle
+      marker_ids: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+    - bundle_type: basket_bundle
+      marker_ids: [50, 60, 70, 80, 90, 100]
+    - bundle_type: basket_bundle
+      marker_ids: [51, 61, 71, 81, 91, 101]
+    - bundle_type: basket_bundle
+      marker_ids: [52, 62, 72, 82, 92, 102]
+    - bundle_type: basket_bundle
+      marker_ids: [53, 63, 73, 83, 93, 103]
+    - bundle_type: basket_bundle
+      marker_ids: [54, 64, 74, 84, 94, 104]
+    - bundle_type: basket_bundle
+      marker_ids: [55, 65, 75, 85, 95, 105]
+    - bundle_type: basket_bundle
+      marker_ids: [56, 66, 76, 86, 96, 106]
+    - bundle_type: basket_bundle
+      marker_ids: [57, 67, 77, 87, 97, 107]
+    - bundle_type: basket_bundle
+      marker_ids: [58, 68, 78, 88, 98, 108]
+    - bundle_type: basket_bundle
+      marker_ids: [59, 69, 79, 89, 99, 109]
+    - bundle_type: basket_bundle
+      marker_ids: [110, 120, 130, 140, 150, 160]
+    - bundle_type: basket_bundle
+      marker_ids: [111, 121, 131, 141, 151, 161]
+    - bundle_type: basket_bundle
+      marker_ids: [112, 122, 132, 142, 152, 162]
+    - bundle_type: basket_bundle
+      marker_ids: [113, 123, 133, 143, 153, 163]
+    - bundle_type: basket_bundle
+      marker_ids: [114, 124, 134, 144, 154, 164]
+    - bundle_type: basket_bundle
+      marker_ids: [115, 125, 135, 145, 155, 165]
+    - bundle_type: basket_bundle
+      marker_ids: [116, 126, 136, 146, 156, 166]
+    - bundle_type: basket_bundle
+      marker_ids: [117, 127, 137, 147, 157, 167]
+    - bundle_type: basket_bundle
+      marker_ids: [118, 128, 138, 148, 158, 168]
+    - bundle_type: basket_bundle
+      marker_ids: [119, 129, 139, 149, 159, 169]
+  baskets_right_fryers_bundles:
+    - bundle_type: HennyPenny_EEG-244_bundle
+      marker_ids: [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+    - bundle_type: basket_bundle
+      marker_ids: [50, 60, 70, 80, 90, 100]
+    - bundle_type: basket_bundle
+      marker_ids: [51, 61, 71, 81, 91, 101]
+    - bundle_type: basket_bundle
+      marker_ids: [52, 62, 72, 82, 92, 102]
+    - bundle_type: basket_bundle
+      marker_ids: [53, 63, 73, 83, 93, 103]
+    - bundle_type: basket_bundle
+      marker_ids: [54, 64, 74, 84, 94, 104]
+    - bundle_type: basket_bundle
+      marker_ids: [55, 65, 75, 85, 95, 105]
+    - bundle_type: basket_bundle
+      marker_ids: [56, 66, 76, 86, 96, 106]
+    - bundle_type: basket_bundle
+      marker_ids: [57, 67, 77, 87, 97, 107]
+    - bundle_type: basket_bundle
+      marker_ids: [58, 68, 78, 88, 98, 108]
+    - bundle_type: basket_bundle
+      marker_ids: [59, 69, 79, 89, 99, 109]
+    - bundle_type: basket_bundle
+      marker_ids: [110, 120, 130, 140, 150, 160]
+    - bundle_type: basket_bundle
+      marker_ids: [111, 121, 131, 141, 151, 161]
+    - bundle_type: basket_bundle
+      marker_ids: [112, 122, 132, 142, 152, 162]
+    - bundle_type: basket_bundle
+      marker_ids: [113, 123, 133, 143, 153, 163]
+    - bundle_type: basket_bundle
+      marker_ids: [114, 124, 134, 144, 154, 164]
+    - bundle_type: basket_bundle
+      marker_ids: [115, 125, 135, 145, 155, 165]
+    - bundle_type: basket_bundle
+      marker_ids: [116, 126, 136, 146, 156, 166]
+    - bundle_type: basket_bundle
+      marker_ids: [117, 127, 137, 147, 157, 167]
+    - bundle_type: basket_bundle
+      marker_ids: [118, 128, 138, 148, 158, 168]
+    - bundle_type: basket_bundle
+      marker_ids: [119, 129, 139, 149, 159, 169]
+  baskets_only_bundles:
+    - bundle_type: basket_bundle
+      marker_ids: [50, 60, 70, 80, 90, 100]
+    - bundle_type: basket_bundle
+      marker_ids: [51, 61, 71, 81, 91, 101]
+    - bundle_type: basket_bundle
+      marker_ids: [52, 62, 72, 82, 92, 102]
+    - bundle_type: basket_bundle
+      marker_ids: [53, 63, 73, 83, 93, 103]
+    - bundle_type: basket_bundle
+      marker_ids: [54, 64, 74, 84, 94, 104]
+    - bundle_type: basket_bundle
+      marker_ids: [55, 65, 75, 85, 95, 105]
+    - bundle_type: basket_bundle
+      marker_ids: [56, 66, 76, 86, 96, 106]
+    - bundle_type: basket_bundle
+      marker_ids: [57, 67, 77, 87, 97, 107]
+    - bundle_type: basket_bundle
+      marker_ids: [58, 68, 78, 88, 98, 108]
+    - bundle_type: basket_bundle
+      marker_ids: [59, 69, 79, 89, 99, 109]
+    - bundle_type: basket_bundle
+      marker_ids: [110, 120, 130, 140, 150, 160]
+    - bundle_type: basket_bundle
+      marker_ids: [111, 121, 131, 141, 151, 161]
+    - bundle_type: basket_bundle
+      marker_ids: [112, 122, 132, 142, 152, 162]
+    - bundle_type: basket_bundle
+      marker_ids: [113, 123, 133, 143, 153, 163]
+    - bundle_type: basket_bundle
+      marker_ids: [114, 124, 134, 144, 154, 164]
+    - bundle_type: basket_bundle
+      marker_ids: [115, 125, 135, 145, 155, 165]
+    - bundle_type: basket_bundle
+      marker_ids: [116, 126, 136, 146, 156, 166]
+    - bundle_type: basket_bundle
+      marker_ids: [117, 127, 137, 147, 157, 167]
+    - bundle_type: basket_bundle
+      marker_ids: [118, 128, 138, 148, 158, 168]
+    - bundle_type: basket_bundle
+      marker_ids: [119, 129, 139, 149, 159, 169]

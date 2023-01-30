@@ -1,0 +1,47 @@
+# Global
+default_tools:
+  cal_mark:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: cal_mark
+  skimmer:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: skimmer
+  winco_fb_10:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: winco_fb_10
+  winco_fb_20:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: winco_fb_20
+  winco_fb_30:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: winco_fb_30
+  hennypenny_69085:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: hennypenny_69085
+  pronto_cbseoft8:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: pronto_cbseoft8
+  pronto_lbpn1290:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: pronto_lbpn1290
+  winco_fb_20_eggroll:
+    belt_slot: -1
+    default_slot: -1
+    rest_slot: -1
+    type: winco_fb_20_eggroll

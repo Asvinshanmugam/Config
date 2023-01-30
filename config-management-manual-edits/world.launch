@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<launch>
+  <arg name="distributed"/>
+  <arg name="sim_world"/>
+  <arg name="sensors"/>
+  <arg name="ar"/>
+  <arg name="sim"/>
+  <arg name="chefui"/>
+  <arg name="calibration"/>
+  <arg name="calibrated"/>
+  <arg name="fps_limit"/>
+  <arg name="env_loader"/>
+  <arg name="new_classifier"/>
+  <arg name="behaviors"/>
+  <arg name="publish_behavior_waypoints"/>
+
+  <arg name="ar_type"               value="ArUco"/>
+
+  <arg name="behavior_version"      value="JB93"/>
+  <arg name="robot_model"           value="yaskawa_gp7"/>
+  <arg name="ring_adapter_model"    value="ring_adapter_yaskawa-1.0"/>
+  <arg name="gripper_model"         value="tool_gripper_electric-1.0"/>
+  <arg name="rail"                  value="true"/>
+  <arg name="rail_min"              value="-1.34"/>
+  <arg name="rail_max"              value="1.34"/>
+  <arg name="robot_stand_model"     value="overhead_rail_stand_canopy_hood_128.5_sb_v1.0"/>
+  <arg name="robot_base_offset_xyz" value="0.33018438 1.64195000 1.9054"/>
+  <arg name="robot_rpy"             value="3.14159 0.0 0.0"/>
+  <!-- height should be 1.87999 base on CAD, but appled 1 inch offset to match HW on site -->
+  <arg name="rail_mount_offset_xyz" value="0 0 0"/>
+
+  <arg name="init_joints"           value="{
+   'slider_1': 0.77300,
+    'joint_1': 0.0,
+    'joint_2': 0.015,
+    'joint_3': -1.1,
+    'joint_5': 1.55,
+    'joint_4': 0.0,
+    'joint_6': 0.0,
+  }"/>
+
+  <arg name="safety_system" value="sick_plc"/>
+  <arg name="enable_wrench" value="true"/>
+
+  <arg name="basket_roll_limits"    value="[-0.30, 0.30]"/>
+  <arg name="basket_pitch_limits"   value="[-0.35, 0.85]"/>
+  <arg name="basket_param_sets"     value="[
+    {'id': 50, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 51, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 52, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 53, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 54, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 55, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 56, 'basket_model': 'winco_fb_20_eggroll', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 57, 'basket_model': 'winco_fb_20_eggroll', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 58, 'basket_model': 'pronto_lbpn1290', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 59, 'basket_model': 'pronto_lbpn1290', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 110, 'basket_model': 'winco_fb_20_eggroll', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 111, 'basket_model': 'winco_fb_20_eggroll', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 112, 'basket_model': 'winco_fb_20_eggroll', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 113, 'basket_model': 'winco_fb_20_eggroll', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 114, 'basket_model': 'winco_fb_20_eggroll', 'handle_model': 'pronto_6_50_35_20'},
+    {'id': 115, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 116, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 117, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 118, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+    {'id': 119, 'basket_model': 'winco_fb_20', 'handle_model': 'winco_6_50_35_20'},
+  ]"/>
+
+  <arg name="fryer_model"           value="HennyPenny_EEG-244"/>
+  <arg name="fryer_hanger_model"    value="HennyPenny_EEG-244_1.0"/>
+  <arg name="fryer_roll_limits"     value="[-0.05, 0.05]"/>
+  <arg name="fryer_pitch_limits"    value="[-0.08, 0.08]"/>
+  <arg name="fryer_param_sets"      value="[
+    {'id': 1, 'tx': 0.45910547, 'ty': 2.15203172},
+    {'id': 2, 'tx': 0.45910547, 'ty': 1.75666802},
+    {'id': 3, 'tx': 0.45910547, 'ty': 1.36130432},
+    {'id': 4, 'tx': 0.45910547, 'ty': 0.96594062},
+  ]"/>
+
+  <arg name="sensor_param_sets" value="[
+    {
+      'camera_name':                'fryer_left',
+      'address':                    'fryer-left.roar1.k1.internal.misorobotics.com',
+      'sim_kinect_init_pose':       [0.10020983, 2.29704900, 1.71462566, 0.641, -0.641,  0.299, -0.299],
+      'bundles_param_path':         '/install/bundle_config/baskets_left_fryers_bundles',
+      'bundle_types_param_path':    '/install/bundle_config/bundle_types',
+      'serial_no':                  '121622062640',
+      'custom_fps_limit':           6,
+      'custom_depth_throttle_rate': 3,
+      'enable_color':               false,
+    },
+    {
+      'camera_name':                'fryer_mid',
+      'address':                    'fryer-mid.roar1.k1.internal.misorobotics.com',
+      'sim_kinect_init_pose':       [0.10020983, 1.43668750, 1.71462566, 0.641, -0.641,  0.299, -0.299],
+      'bundles_param_path':         '/install/bundle_config/baskets_mid_fryers_bundles',
+      'bundle_types_param_path':    '/install/bundle_config/bundle_types',
+      'serial_no':                  '123122063217',
+      'custom_fps_limit':           6,
+      'custom_depth_throttle_rate': 3,
+      'enable_color':               false,
+    },
+    {
+      'camera_name':                'fryer_right',
+      'address':                    'fryer-right.roar1.k1.internal.misorobotics.com',
+      'sim_kinect_init_pose':       [0.10020983, 0.64293750, 1.71462566, 0.641, -0.641,  0.299, -0.299],
+      'bundles_param_path':         '/install/bundle_config/baskets_right_fryers_bundles',
+      'bundle_types_param_path':    '/install/bundle_config/bundle_types',
+      'serial_no':                  '123122062770',
+      'custom_fps_limit':           6,
+      'custom_depth_throttle_rate': 3,
+      'enable_color':               false,
+    },
+  ]"/>
+  <arg name="teknic_param_sets"     value="[
+    {
+      'serial_no':        None,
+      'motors':           [
+        {
+          'gear_ratio':       50.0,
+          'config_file':      '$(find teknic_sc_motor_driver)/config/TeknicLockingAutoBin.mtr',
+        },
+        {
+          'gear_ratio':       50.0,
+          'config_file':      '$(find teknic_sc_motor_driver)/config/TeknicLockingAutoBin.mtr',
+        },
+      ]
+    },
+  ]"/>
+
+  <arg name="auto_bin_param_sets"   value="[
+    {
+      'name':             'auto_bin_1',
+      'port':             0,
+      'serial_no':        'SN00053',
+      'custom_fps_limit': 10,
+      'crop_region':      [[195, 45], [451, 301]],
+      'slot_path':        '/auto_bin_1/slot',
+      'tx':                0.140294,
+      'ty':                2.469515,
+      'tz':                0.9064,
+    },
+    {
+      'name':             'auto_bin_2',
+      'port':             1,
+      'serial_no':        'SN00056',
+      'custom_fps_limit': 10,
+      'crop_region':      [[182, 76], [438, 326]],
+      'slot_path':        '/auto_bin_2/slot',
+      'tx':                0.140294,
+      'ty':                2.469515,
+      'tz':                0.9064,
+    },
+  ]"/>
+
+  <arg name="auto_bin_trajectory"   value="{
+    'position':          [-0.9, -0.8, -1.6, -1.5, -1.6, -1.5, -1.6],
+    'velocity':          [ 1.0,  1.0,  0.7,  0.7,  0.7,  0.7,  0.5],
+    'acceleration':      [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 1.5],
+    'start_position':    -0.2,
+    'start_velocity':     1.2,
+    'start_acceleration': 10.0,
+  }"/>
+
+  <arg name="specialty_basket_sensor_param_set" value="{
+    'name':                    'specialty_baskets_racks',
+    'serial_no':               'SN00051',
+    'custom_fps_limit':        '10',
+    'bundles_param_path':      '/install/bundle_config/baskets_only_bundles',
+    'bundle_types_param_path': '/install/bundle_config/bundle_types',
+    'in_rack_1_region':        '[1000, 50, 1200, 300]',
+    'out_rack_1_region':       '[600, 60, 850, 375]',
+  }"/>
+
+  <include file="$(find chippy_launch)/launch/objects/load_hopper.launch">
+    <arg name="sim_world"     value="$(arg sim_world)"/>
+    <arg name="id"            value="1"/>
+    <arg name="tx"            value="0.3683"/>
+    <arg name="ty"            value="-0.0127"/>
+    <arg name="hopper_params" value="{
+      device: /dev/ram_280,
+      sides: {
+        left: {
+          portion_sizes: {
+            SMALL: 0.5,
+            MEDIUM: 1.0,
+            LARGE: 1.5,
+          },
+        },
+        right: {
+          portion_sizes: {
+            SMALL: 0.5,
+            MEDIUM: 1.0,
+            LARGE: 1.5,
+          },
+        },
+      },
+    }"/>
+  </include>
+
+  <arg name="static_object_param_sets"            value="[
+    {
+      'name':      'JB93_hood',
+      'mesh_name': 'JB93_hood',
+      'tx':        1.359,
+      'ty':        2.4765,
+      'tz':        1.143,
+    }
+  ]"/>
+
+  <arg name="aruco_reprojection_error_thresh"   value="10.0"/>
+  <arg name="aruco_max_solves"                  value="20"/>
+
+  <rosparam unless="$(arg sim_world)" param="/ar_localizer/valid_trans_sigma">0.025</rosparam>
+  <rosparam unless="$(arg sim_world)" param="/ar_localizer/valid_euler_sigma">10.0</rosparam>
+  <rosparam unless="$(arg sim_world)" param="/ar_localizer/valid_num_readings">7</rosparam>
+  <rosparam unless="$(arg sim_world)" param="/ar_localizer/duration_window">10.0</rosparam>
+
+  <rosparam param="/cameras/fryer_left/infra1/aruco_detect/blacklist_regions">
+    - [[1062, 60], [1206, 619], [1274, 619], [1271, 62]]
+  </rosparam>
+  <rosparam param="/cameras/fryer_mid/infra1/aruco_detect/blacklist_regions">
+    - [[27, 52], [20, 668], [292, 673], [370, 50]]
+    - [[740, 89], [780, 706], [1207, 694], [1060, 71]]
+  </rosparam>
+  <rosparam param="/cameras/fryer_right/infra1/aruco_detect/blacklist_regions">
+    - [[0, 0], [0, 658], [343, 666], [406, 74]]
+  </rosparam>
+
+  <include file="$(find chippy_launch)/launch/load_world.launch" pass_all_args="true"/>
+</launch>

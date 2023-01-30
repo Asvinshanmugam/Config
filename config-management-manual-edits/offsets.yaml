@@ -1,0 +1,119 @@
+fryer_slot:
+  1:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  2:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  3:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  4:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  5:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  6:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  7:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  8:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+
+fryer_hanger:
+  1:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  2:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  3:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  4:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  5:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  6:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  7:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  8:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+
+basket:
+  slot:
+    1:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    2:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    3:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    4:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    5:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    6:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    7:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    8:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+
+  hanger:
+    1:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    2:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    3:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    4:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    5:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    6:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    7:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+    8:
+      'absolute': [0.0, 0.0, 0.0]
+      'relative': [0.0, 0.0, 0.0]
+
+  in_rack:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+
+out_rack:
+  1:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  2:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]
+  3:
+    'absolute': [0.0, 0.0, 0.0]
+    'relative': [0.0, 0.0, 0.0]

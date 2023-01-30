@@ -1,0 +1,299 @@
+# Flippy 2
+behaviors:
+  enable_gripper_sensor: True
+  use_refactored_behavior_system: True
+  behavior_version: "hennypenny"
+  coordinated_motion: True
+  off_joints: [0.50, 1.02025, -0.50103, -1.16485, 0.0, 1.20621, 0.0]
+  home_joints: [0.773, 0.0, 0.015, -1.1, 0.0, 1.55, 0.0]
+  clean_joints: [0.50, 1.02025, -0.50103, -1.16485, 0.0, 1.20621, 0.0]
+  avoid_singularity_slider_offset: 0.4
+  hanger_height: 0.12
+  return_joint_speed_multiplier: 0.3
+  unimplemented: [skim]
+  num_pre_cook_agitations: 0
+  num_mid_cook_agitations: 0
+  num_post_cook_agitations: 6
+  default_period: 0.075
+  max_joint_speed: 5.5
+  default_joint_speeds:
+    arm: 3.5
+    slider: 0.75
+  joint_torque_gains: [109.1, 122.0, 100.0, 75.0, 64.0, 40.8]
+  estimation_error_boundary: [2.0, 2.0, 2.0, 1.0, 1.0, 1.0]
+  default_fast_stop: True
+  default_angular_speed: 3.0
+  fast_behavior_exec: True
+  period_coeff: 0.8
+calibration:
+  cameras:
+  - frame: cameras/fryer_left/camera_color_optical_frame
+    name: /cameras/fryer_left/color
+  - frame: cameras/fryer_left/camera_infra1_optical_frame
+    name: /cameras/fryer_left/infra1
+  - frame: cameras/fryer_left/camera_infra2_optical_frame
+    name: /cameras/fryer_left/infra2
+  - frame: cameras/fryer_mid/camera_color_optical_frame
+    name: /cameras/fryer_mid/color
+  - frame: cameras/fryer_mid/camera_infra1_optical_frame
+    name: /cameras/fryer_mid/infra1
+  - frame: cameras/fryer_mid/camera_infra2_optical_frame
+    name: /cameras/fryer_mid/infra2
+  - frame: cameras/fryer_right/camera_color_optical_frame
+    name: /cameras/fryer_right/color
+  - frame: cameras/fryer_right/camera_infra1_optical_frame
+    name: /cameras/fryer_right/infra1
+  - frame: cameras/fryer_right/camera_infra2_optical_frame
+    name: /cameras/fryer_right/infra2
+calibration_references:
+  fryer_work_area_left:
+    cameras:
+    - name: /cameras/fryer_left/color
+      guess:
+        extrinsics:
+          xyz: [-0.190, 0.203, -0.024]
+          rpy: [-3.134, 0.810, -3.115]
+    - name: /cameras/fryer_left/infra1
+      guess:
+        extrinsics:
+          xyz: [-0.203, 0.203, -0.035]
+          rpy: [-3.139, 0.813, -3.120]
+    - name: /cameras/fryer_left/infra2
+      guess:
+        extrinsics:
+          xyz: [-0.239, 0.203, -0.075]
+          rpy: [-3.141, 0.813, -3.123]
+    sample_parameters:
+      distance:
+        center: 0.9
+        range: 0.6
+      image:
+        height: 576
+        width: 1024
+      rotation:
+        center: [3.142, 0.0, 0.0]
+        range: [0.4, 0.4, 6.283]
+    tool_frame: cal_mark_tool0
+    slider_offset: -0.4
+    waypoints:
+    - [0.593, 0.0, -0.44, -0.99, 0.0, 1.1, 0.0]
+    - [0.0, 0.0, -0.44, -0.99, 0.0, 1.1, 0.0]
+    - [-0.15, -1.4, -0.44, -0.99, 0.0, 1.1, 0.0]
+  fryer_work_area_mid:
+    cameras:
+    - name: /cameras/fryer_mid/color
+      guess:
+        extrinsics:
+          xyz: [-0.201, -0.227, -0.143]
+          rpy: [-3.137, 0.533, -3.138]
+    - name: /cameras/fryer_mid/infra1
+      guess:
+        extrinsics:
+          xyz: [-0.214, -0.227, -0.150]
+          rpy: [-3.131, 0.536, -3.134]
+    - name: /cameras/fryer_mid/infra2
+      guess:
+        extrinsics:
+          xyz: [-0.261, -0.227, -0.179]
+          rpy: [-3.132, 0.537, -3.135]
+    sample_parameters:
+      distance:
+        center: 0.9
+        range: 0.6
+      image:
+        height: 576
+        width: 1024
+      rotation:
+        center: [3.142, 0.0, 0.0]
+        range: [0.4, 0.4, 6.283]
+    tool_frame: cal_mark_tool0
+    slider_offset: 0.4
+    waypoints:
+    - [0.593, 0.0, -0.44, -0.99, 0.0, 1.1, 0.0]
+    - [0.0, 0.0, -0.44, -0.99, 0.0, 1.1, 0.0]
+    - [0.4, 1.4, -0.44, -0.99, 0.0, 1.1, 0.0]
+  fryer_work_area_right:
+    cameras:
+    - name: /cameras/fryer_right/color
+      guess:
+        extrinsics:
+          xyz: [-0.201, -0.677, -0.141]
+          rpy: [-3.122, 0.531, 3.139]
+    - name: /cameras/fryer_right/infra1
+      guess:
+        extrinsics:
+          xyz: [-0.215, -0.677, -0.149]
+          rpy: [-3.125, 0.534, 3.140]
+    - name: /cameras/fryer_right/infra2
+      guess:
+        extrinsics:
+          xyz: [-0.262, -0.677, -0.177]
+          rpy: [-3.125, 0.534, 3.140]
+    sample_parameters:
+      distance:
+        center: 0.9
+        range: 0.6
+      image:
+        height: 576
+        width: 1024
+      rotation:
+        center: [3.142, 0.0, 0.0]
+        range: [0.4, 0.4, 6.283]
+    tool_frame: cal_mark_tool0
+    slider_offset: 0.4
+    waypoints:
+    - [0.593, 0.0, -0.44, -0.99, 0.0, 1.1, 0.0]
+    - [0.0, 0.0, -0.44, -0.99, 0.0, 1.1, 0.0]
+    - [0.2, 1.4, -0.44, -0.99, 0.0, 1.1, 0.0]
+camera_configurations:
+  cameras:
+    fryer_left:
+      depth-auto-exposure-on:
+        rs415_depth_enable_auto_exposure: True
+      depth-auto-exposure-off:
+        rs415_depth_enable_auto_exposure: False
+      depth-emitter-on:
+        rs415_depth_emitter_enabled: 1
+      depth-emitter-off:
+        rs415_depth_emitter_enabled: 0
+      depth-exposure:
+        rs415_depth_exposure: 300
+      depth-gain:
+        rs415_depth_gain: 50
+      post-calibrate:
+        rs415_depth_emitter_enabled: 0
+      pre-calibrate:
+        rs415_depth_emitter_enabled: 0
+    fryer_mid:
+      depth-auto-exposure-on:
+        rs415_depth_enable_auto_exposure: True
+      depth-auto-exposure-off:
+        rs415_depth_enable_auto_exposure: False
+      depth-emitter-on:
+        rs415_depth_emitter_enabled: 1
+      depth-emitter-off:
+        rs415_depth_emitter_enabled: 0
+      depth-exposure:
+        rs415_depth_exposure: 300
+      depth-gain:
+        rs415_depth_gain: 50
+      post-calibrate:
+        rs415_depth_emitter_enabled: 0
+      pre-calibrate:
+        rs415_depth_emitter_enabled: 0
+    fryer_right:
+      depth-auto-exposure-on:
+        rs415_depth_enable_auto_exposure: True
+      depth-auto-exposure-off:
+        rs415_depth_enable_auto_exposure: False
+      depth-emitter-on:
+        rs415_depth_emitter_enabled: 1
+      depth-emitter-off:
+        rs415_depth_emitter_enabled: 0
+      depth-exposure:
+        rs415_depth_exposure: 300
+      depth-gain:
+        rs415_depth_gain: 50
+      post-calibrate:
+        rs415_depth_emitter_enabled: 0
+      pre-calibrate:
+        rs415_depth_emitter_enabled: 0
+network_devices:
+  ap: 10.129.0.90
+  pdu: 10.129.0.84
+  plc: 10.129.0.85
+  robot: 10.129.0.83
+  router: 10.129.0.81
+  surve_cam1: 10.129.0.86
+  surve_cam2: 10.129.0.87
+  tablet: 10.129.0.89
+sick_plc:
+  modbus:
+    ip_address: 10.129.0.85
+    port: 502
+  publisher:
+    name: 'status'
+    rate_hz: 10
+    sensors:
+      - sensor_name: 'Fryer Barrier Interlock'
+        value_description: 'True is activated'
+        safety_critical: true
+        modbus_address: 256
+        size: 1
+      - sensor_name: 'Hot Holding Barrier Interlock'
+        value_description: 'True is activated'
+        safety_critical: true
+        modbus_address: 257
+        size: 1
+      - sensor_name: 'E-Stop'
+        value_description: 'True is activated'
+        safety_critical: true
+        modbus_address: 258
+        size: 1
+      - sensor_name: 'in_rack_1_sensor'
+        value_description: 'True is activated'
+        safety_critical: false
+        modbus_address: 261
+        size: 1
+      - sensor_name: 'out_rack_1_sensor'
+        value_description: 'True is activated'
+        safety_critical: false
+        modbus_address: 259
+        size: 1
+      - sensor_name: 'Light Curtain'
+        value_description: 'True is activated'
+        safety_critical: false
+        modbus_address: 262
+        size: 1
+  status_server:
+    name: 'status'
+    modbus_address: 2000
+    size: 2
+object_manager:
+  in_rack_id: 1
+  in_rack_slot_ids: [1, 2]
+  in_rack_slot_path: "/rack_1"
+  out_rack_id: 2
+  out_rack_slot_ids: [1, 2]
+  out_rack_slot_path: "/rack_2"
+workspace:
+  in_fryer:
+    x_max: 0.376
+    x_min: 0.171
+    y_max: 1.039
+    y_min: -0.148
+    z_max: 1.217
+    z_min: 0.910
+  in_rack:
+    x_max: 0.172
+    x_min: -0.172
+    y_max: -1.091
+    y_min: -1.491
+    z_max: 1.171
+    z_min: 0.971
+  out_rack:
+    x_max: 0.172
+    x_min: -0.172
+    y_max: 1.491
+    y_min: 1.091
+    z_max: 1.171
+    z_min: 0.971
+disabled_collisions:
+- roof_panel
+- link_0
+- link_2
+- link_4
+- link_4
+- link_6
+- link_0
+- JB93_hood
+- ring_adapter
+- roof_panel
+- link_4
+- roof_panel
+- ansuls
+- fryer_basket
+- link_4
+- right_frame_wall
+- link_4
+- ring_adapter

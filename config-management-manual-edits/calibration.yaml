@@ -1,0 +1,23 @@
+---
+apiVersion: misorobotics.io/v1
+kind: PoseGeneratorSeed
+spec:
+  cameras:
+    - name: left
+      namespace: /cameras/fryer_left
+      subcam: infra1
+      num_poses:
+        train: 20
+        test: 10
+    - name: mid
+      namespace: /cameras/fryer_mid
+      subcam: infra1
+      num_poses:
+        train: 20
+        test: 10
+    - name: right
+      namespace: /cameras/fryer_right
+      subcam: infra1
+      num_poses:
+        train: 20
+        test: 10

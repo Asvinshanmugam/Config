@@ -1,0 +1,306 @@
+location_info:
+  brand_code: JB
+  location_code: 93
+  unit_number: FF-014
+classifiers:
+  basket_classifier:
+    input_encoding: bgr8
+    classes:
+    - onion_rings
+    - empty
+    - spicy_chicken_fillets
+    - crispy_chicken_fillets
+    - tiny_tacos
+    - churros
+    - chicken_strips
+    - chicken_nuggets
+    - stuffed_jalapenos
+    - egg_rolls
+    - curly_fries
+    - french_fries
+    # Specialty basket only food items
+    - chicken_patties
+    - french_toast_sticks
+    - hashbrowns
+    - tacos
+    - monster_tacos
+    enable_adj_cook_time: true
+    cook_ranges:
+      # Cook Range [min, max, priority, grace_period=0]
+      chicken_nuggets:
+        regular: [135, 165, 1.0, 15]
+        well: [165, 195, 1.0, 15]
+        default_doneness: [regular]
+      chicken_strips:
+        regular: [155, 185, 1.0, 30]
+        well: [185, 215, 1.0, 30]
+        extra: [255, 285, 1.0, 30]
+        default_doneness: [regular]
+      churros:
+        regular: [75, 105, 1.0, 10]
+        well: [105, 135, 1.0, 10]
+        default_doneness: [regular]
+      crispy_chicken_fillets:
+        regular: [195, 225, 1.0, 40]
+        well: [225, 255, 1.0, 40]
+        extra: [330, 390, 1.0, 40]
+        default_doneness: [regular]
+      curly_fries:
+        regular: [125, 155, 1.5, 15]
+        well: [155, 185, 1.5, 15]
+        default_doneness: [regular]
+      egg_rolls:
+        regular: [155, 185, 1.0, 15]
+        well: [185, 215, 1.0, 15]
+        default_doneness: [regular]
+      french_fries:
+        regular: [135, 165, 1.5, 15]
+        well: [165, 195, 1.5, 15]
+        default_doneness: [regular]
+      stuffed_jalapenos:
+        regular: [155, 165, 1.0, 15]
+        well: [165, 195, 1.0, 15]
+        default_doneness: [regular]
+      onion_rings:
+        regular: [100, 130, 1.0, 15]
+        well: [130, 160, 1.0, 15]
+        default_doneness: [regular]
+      spicy_chicken_fillets:
+        regular: [195, 225, 1.0, 40]
+        well: [225, 255, 1.0, 40]
+        extra: [330, 390, 1.0, 40]
+        default_doneness: [regular]
+      tiny_tacos:
+        regular: [62, 92, 1.0, 10]
+        well: [92, 122, 1.0, 10]
+        default_doneness: [regular]
+      chicken_patties:
+        regular: [135, 165, 1.0, 15]
+        well: [165, 195, 1.0, 15]
+        default_doneness: [regular]
+      french_toast_sticks:
+        regular: [75, 105, 1.0, 10]
+        well: [105, 135, 1.0, 10]
+        default_doneness: [regular]
+      hashbrowns:
+        regular: [125, 155, 1.0, 15]
+        well: [155, 185, 1.0, 15]
+        default_doneness: [regular]
+      tacos:
+        regular: [50, 80, 1.5, 10]
+        well: [80, 110, 1.5, 10]
+        default_doneness: [regular]
+      monster_tacos:
+        regular: [62, 92, 1.5, 10]
+        well: [92, 122, 1.5, 10]
+        default_doneness: [regular]
+    fryer_slot_preferences:
+      chicken_nuggets: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      chicken_strips: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      churros: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      crispy_chicken_fillets: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      curly_fries: [[7, 8], [1, 2], [3, 4, 5, 6]]
+      egg_rolls: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      french_fries: [[7, 8], [1, 2], [3, 4, 5, 6]]
+      stuffed_jalapenos: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      onion_rings: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      spicy_chicken_fillets: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      tiny_tacos: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      chicken_patties: [[1, 2], [7, 8], [3, 4, 5, 6]]
+      french_toast_sticks: [[3, 4, 5, 6], [1, 2], [7, 8]]
+      hashbrowns: [[3, 4, 5, 6], [1, 2], [7, 8]]
+      tacos: [[3, 4, 5, 6], [1, 2], [7, 8]]
+      monster_tacos: [[3, 4, 5, 6], [1, 2], [7, 8]]
+    sb_supported_food_types:
+      pronto_lbpn1290: [chicken_patties, hashbrowns]
+      winco_fb_20_eggroll: [tacos, monster_tacos, chicken_nuggets, churros, egg_rolls, french_toast_sticks, stuffed_jalapenos]
+    name: jack_in_the_box
+cook_forever:
+  default: peak_time
+  peak_time:
+    cadence: 60
+    food_distribution:
+      chicken_nuggets: 0.04
+      chicken_strips: 0.04
+      churros: 0.03
+      crispy_chicken_fillets: 0.04
+      curly_fries: 0.18
+      egg_rolls: 0.04
+      french_fries: 0.19
+      stuffed_jalapenos: 0.02
+      onion_rings: 0.03
+      spicy_chicken_fillets: 0.05
+      tiny_tacos: 0.08
+      chicken_patties: 0.04
+      french_toast_sticks: 0.04
+      hashbrowns: 0.03
+      tacos: 0.19
+      monster_tacos: 0.04
+environment:
+  num_input_slots: 2
+  num_sb_in_rack_slots: 1
+  num_sb_out_rack_slots: 1
+  regular_fryer_slots: [1, 2, 7, 8]
+  sb_fryer_slots: [3, 4, 5, 6]
+  hoppers:
+    hopper_left:
+      food_type: curly_fries
+      slot_code: left
+    hopper_right:
+      food_type: french_fries
+      slot_code: right
+scheduling:
+  plan_durations:
+    fryer_to_dump_to_fill_to_fryer: 6.0
+    fryer_to_dump_to_hanger: 4.0
+    fryer_to_hanger: 4.6
+    fryer_to_outrack: 3.8
+    hanger_to_fill_to_fryer: 2.8
+    hanger_to_fryer: 1.0
+    hanger_to_outrack: 3.1
+    inrack_to_fryer: 1.1
+  exec_durations:
+    fryer_to_dump_to_fill_to_fryer: 49.6
+    fryer_to_dump_to_hanger: 33.2
+    fryer_to_hanger: 12.1
+    fryer_to_outrack: 17.1
+    hanger_to_fill_to_fryer: 33.9
+    hanger_to_fryer: 16.0
+    hanger_to_outrack: 15.3
+    inrack_to_fryer: 19.2
+  name_to_event_times:
+    fryer_to_dump_to_fill_to_fryer:
+    - [Unsubmerged, 9.8]
+    - [Submerged, 38.7]
+    fryer_to_dump_to_hanger:
+    - [Unsubmerged, 9.8]
+    fryer_to_hanger:
+    - [Unsubmerged, 9.8]
+    fryer_to_outrack:
+    - [Unsubmerged, 6.5]
+    - [OutRackPlaced, 14.1]
+    hanger_to_fill_to_fryer:
+    - [Submerged, 22.8]
+    hanger_to_fryer:
+    - [Submerged, 9.8]
+    hanger_to_outrack:
+    - [OutRackPlaced, 13.3]
+    inrack_to_fryer:
+    - [InRackPicked, 2.0]
+    - [Submerged, 13.4]
+    - [ProbablyDipped, 18.2]
+  turbo_plan_durations:
+    fryer_to_dump_to_fill_to_fryer: 6.0
+    fryer_to_dump_to_hanger: 4.5
+    fryer_to_hanger: 4.6
+    fryer_to_outrack: 3.8
+    hanger_to_fill_to_fryer: 3.5
+    hanger_to_fryer: 1.0
+    hanger_to_outrack: 3.1
+    inrack_to_fryer: 1.0
+  turbo_exec_durations:
+    fryer_to_dump_to_fill_to_fryer: 45.6
+    fryer_to_dump_to_hanger: 29.2
+    fryer_to_hanger: 12.1
+    fryer_to_outrack: 17.1
+    hanger_to_fill_to_fryer: 29.9
+    hanger_to_fryer: 16.0
+    hanger_to_outrack: 15.3
+    inrack_to_fryer: 19.2
+  turbo_name_to_event_times:
+    fryer_to_dump_to_fill_to_fryer:
+    - [Unsubmerged, 9.8]
+    - [Submerged, 38.7]
+    fryer_to_dump_to_hanger:
+    - [Unsubmerged, 9.8]
+    fryer_to_hanger:
+    - [Unsubmerged, 9.8]
+    fryer_to_outrack:
+    - [Unsubmerged, 6.5]
+    - [OutRackPlaced, 14.1]
+    hanger_to_fill_to_fryer:
+    - [Submerged, 22.8]
+    hanger_to_fryer:
+    - [Submerged, 9.8]
+    hanger_to_outrack:
+    - [OutRackPlaced, 13.3]
+    inrack_to_fryer:
+    - [InRackPicked, 2.0]
+    - [Submerged, 13.4]
+    - [ProbablyDipped, 18.2]
+  name_to_events:
+    fryer_to_dump_to_fill_to_fryer:
+    - Dumping
+    - Unsubmerged
+    - Dumped
+    - Dipping
+    - Dispensing
+    - Dispensed
+    - Submerged
+    - ProbablyDipped
+    fryer_to_dump_to_hanger:
+    - Dumping
+    - Unsubmerged
+    - Dumped
+    fryer_to_hanger:
+    - Unsubmerged
+    - ProbablyHung
+    fryer_to_outrack:
+    - Unsubmerged
+    - OutRackPlaced
+    hanger_to_fill_to_fryer:
+    - Dipping
+    - Dispensing
+    - Dispensed
+    - Submerged
+    - ProbablyDipped
+    hanger_to_fryer:
+    - Submerged
+    hanger_to_outrack:
+    - OutRackPlaced
+    inrack_to_fryer:
+    - InRackPicked
+    - Submerged
+    - ProbablyDipped
+  heuristic:
+    agitation_expiration_dur: 30.
+    buffer_dur: 2.
+    max_plan_fail_count: 5
+    plan_retry_dur: 5.
+    lateness_allowance: 2.
+  queue_sort: prioritize_food_type
+  sim:
+    grasp_recovery_dur: 10.
+    grasp_success_rate: 0.99
+    plan_sticky_failure_dur: 60.
+    plan_success_rate: 0.99
+basket_tracking:
+  y_thresh: 0.07
+  z_thresh: 0.15
+  pitch_thresh: 0.30
+  y_weight: 1.0
+  z_weight: 0.75
+  pitch_weight: 0.30
+flow: [specialty_basket, auto_bin, dispenser]
+hold_clear_mechanism: cycle_estop
+fryer_setup:
+  food_types:
+  - any
+  - any
+  - any
+  - any
+  fryer_number: 4
+  slot_number: 2
+thermometers:
+- mac: 00:1E:C0:5F:6F:AA
+  hci_device: "hci0"
+  max_temp: 205
+  min_temp: 165
+pose_estimation:
+  setup: vulcan
+
+# New features are introduced through feature flags so they can be toggled.
+feature_flags:
+  enable_slot_disabling: true
+  enable_specialty_baskets: true
+  enable_planned_orders: false

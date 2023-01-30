@@ -1,0 +1,314 @@
+source:
+  fryer_1:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - 0.005
+        - 0
+        - 0.01
+        relative:
+        - 0
+        - 0
+        - 0
+      left_hanging_slot:
+        absolute:
+        - 0.01
+        - 0
+        - 0
+        relative:
+        - 0
+        - 0
+        - 0
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0.005
+        - 0
+        - 0.005
+        relative:
+        - 0.005
+        - 0
+        - 0
+      right_hanging_slot:
+        absolute:
+        - 0
+        - 0.008
+        - 0.005
+        relative:
+        - 0.01
+        - -0.005
+        - 0
+  fryer_2:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - 0.005
+        - 0
+        - 0.005
+        relative:
+        - 0
+        - 0
+        - 0
+      left_hanging_slot:
+        absolute:
+        - 0.01
+        - 0
+        - 0
+        relative:
+        - 0
+        - 0
+        - -0.005
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0.005
+        - 0
+        - 0
+        relative:
+        - 0
+        - 0
+        - 0
+      right_hanging_slot:
+        absolute:
+        - 0.005
+        - 0.005
+        - 0
+        relative:
+        - 0
+        - -0.005
+        - 0
+  fryer_3:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - -0.005
+        - -0.015
+        - 0
+        relative:
+        - 0
+        - 0
+        - 0
+      left_hanging_slot:
+        absolute:
+        - 0
+        - 0
+        - 0
+        relative:
+        - 0
+        - 0
+        - 0
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0.005
+        - 0
+        - 0
+        relative:
+        - 0
+        - 0
+        - 0
+      right_hanging_slot:
+        absolute:
+        - 0
+        - 0
+        - -0.005
+        relative:
+        - 0
+        - 0
+        - 0
+  fryer_4:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - -0.004
+        - 0.01
+        - 0.0075
+        relative:
+        - 0
+        - 0
+        - 0
+      left_hanging_slot:
+        absolute:
+        - 0
+        - 0.005
+        - 0.005
+        relative:
+        - 0
+        - 0
+        - 0
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0.005
+        - 0.005
+        - 0
+        relative:
+        - 0
+        - 0
+        - 0
+      right_hanging_slot:
+        absolute:
+        - 0.0
+        - 0.01
+        - 0.0
+        relative:
+        - 0
+        - 0
+        - 0
+target:
+  fryer_1:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - 0.015
+        - 0
+        - 0.025
+        relative:
+        - 0
+        - 0
+        - 0
+      left_hanging_slot:
+        absolute:
+        - 0.01
+        - 0.0
+        - 0.005
+        relative:
+        - 0.005
+        - 0
+        - 0
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0.005
+        - 0.01
+        - 0
+        relative:
+        - 0.02
+        - 0
+        - 0
+      right_hanging_slot:
+        absolute:
+        - 0.015
+        - 0.01
+        - 0.007
+        relative:
+        - 0.008
+        - 0
+        - 0
+  fryer_2:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - 0.0175
+        - -0.0025
+        - 0.03
+        relative:
+        - 0
+        - 0.0
+        - 0
+      left_hanging_slot:
+        absolute:
+        - 0.0
+        - 0
+        - 0.005
+        relative:
+        - 0.005
+        - 0
+        - 0
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0.03
+        - 0.009
+        - 0.02
+        relative:
+        - 0
+        - 0.01
+        - 0
+      right_hanging_slot:
+        absolute:
+        - 0.0
+        - 0
+        - -0.005
+        relative:
+        - 0.01
+        - 0
+        - 0
+  fryer_3:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - 0.015
+        - 0
+        - 0.015
+        relative:
+        - 0
+        - 0.005
+        - 0
+      left_hanging_slot:
+        absolute:
+        - 0.0065
+        - 0.0
+        - 0.005
+        relative:
+        - 0.0075
+        - 0
+        - 0
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0.01
+        - 0.0075
+        - 0.01
+        relative:
+        - 0
+        - 0
+        - 0
+      right_hanging_slot:
+        absolute:
+        - -0.0065
+        - 0
+        - 0
+        relative:
+        - 0.005
+        - 0
+        - 0
+  fryer_4:
+    left_slot:
+      left_frying_slot:
+        absolute:
+        - -0.015
+        - 0.005
+        - 0.0075
+        relative:
+        - 0.005
+        - -0.0025
+        - 0.008
+      left_hanging_slot:
+        absolute:
+        - -0.0025
+        - 0.0025
+        - -0.005
+        relative:
+        - 0.0025
+        - 0
+        - -0.0025
+    right_slot:
+      right_frying_slot:
+        absolute:
+        - 0
+        - 0.015
+        - 0.01
+        relative:
+        - 0.005
+        - 0.005
+        - 0
+      right_hanging_slot:
+        absolute:
+        - -0.005
+        - 0.0075
+        - 0.0075
+        relative:
+        - 0.01
+        - 0
+        - 0.0
